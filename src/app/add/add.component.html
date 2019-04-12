@@ -1,0 +1,34 @@
+
+<form #addgroup="ngForm" (submit)="additems(uname.value,email.value,pnumber.value)" >
+
+  <div class="form-group"> 
+  <input class="form-control" type="text" name ="uname" #uname="ngModel" [(ngModel)]="username" placeholder="Username" required />
+
+  <div *ngIf="uname.invalid && (uname.dirty || uname.touched)"
+             class="alert alert-danger">Username required </div>
+  </div>
+  <div class="form-group"> 
+  <input class="form-control" type="text" name="email" #email="ngModel" [(ngModel)]="emailname"  placeholder="Email" required/>
+  <div *ngIf="email.invalid && (email.dirty || email.touched)"
+             class="alert alert-danger">Email required </div>
+  </div>
+  <div class="form-group"> 
+  <input class="form-control" type="number" name="pnumber" #pnumber="ngModel" [(ngModel)]="phonenumber" placeholder="Phone number" required />
+  </div>
+  <div *ngIf="pnumber.invalid &&(pnumber.dirty||pnumber.touched)" class=" alert alert-danger">Phonenumber Required</div>
+  <div>
+  <button class="btn btn-primary" type="submit" [disabled]="addgroup.invalid">add</button> &nbsp;
+  <button class="btn btn-primary" type="reset">Reset</button>
+  </div>
+</form>
+
+<!--<my-list [addcomp]="uname.value"></my-list>-->
+
+
+
+
+  <table>
+    <tr *ngFor="let ad of add">
+      <td>{{ad.username}}</td>
+    </tr>
+  </table>

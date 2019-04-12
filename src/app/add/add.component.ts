@@ -8,16 +8,15 @@ import { Component } from '@angular/core';
 export class AddComponent  {
 
   add:addcontact[];
-  appcom:string;
+  parentdata:string;
   constructor(){
-    this.add =[{username:'abc',email:'abc@gmail.com',phonenumber:'451226'},
-              {username:'def',email:'def@gmail.com',phonenumber:'246639'}
+    this.add =[{id:'01',username:'abc',email:'abc@gmail.com',phonenumber:'451226'},
+              {id:'02',username:'def',email:'def@gmail.com',phonenumber:'246639'},
     ];
   } 
   additems(uname,email,pnumber){
     //let a:any = this.add.push();
     //console.log(Array:add);
-    console.log( uname,email,pnumber );
     this.add.push();
     //console.log( Array <add> );
   }
@@ -26,6 +25,7 @@ export class AddComponent  {
   }
 }
 export class addcontact{
+  id:number;
   username:string;
   email:string;
   phonenumber:number;

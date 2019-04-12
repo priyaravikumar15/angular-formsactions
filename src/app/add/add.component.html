@@ -1,16 +1,17 @@
 
 <h5>Template Driven Forms</h5>
 <h6>Signup</h6>
-<form #addgroup="ngForm" (submit)="additems(uname.value,email.value,pnumber.value)" >
-
+<form #addgroup="ngForm" (submit)="additems(uname.value,email.value.pnumber.value)" >
+<div >
   <div class="form-group"> 
   <input class="form-control" type="text" name ="uname" #uname="ngModel" [(ngModel)]="username" placeholder="Username" required />
 
   <div *ngIf="uname.invalid && (uname.dirty || uname.touched)"
              class="alert alert-danger">Username required </div>
   </div>
+ 
   <div class="form-group"> 
-  <input class="form-control" type="text" name="email" #email="ngModel" [(ngModel)]="emailname"  placeholder="Email" required/>
+  <input class="form-control" type="text" name="email" #email="ngModel" [(ngModel)]="emails"  placeholder="Email" required/>
   <div *ngIf="email.invalid && (email.dirty || email.touched)"
              class="alert alert-danger">Email required </div>
   </div>
@@ -22,17 +23,18 @@
   <button class="btn btn-primary" type="submit" [disabled]="addgroup.invalid">add</button> &nbsp;
   <button class="btn btn-primary" type="reset">Reset</button>
   </div>
+   </div>
 </form>
 <br/>
-<my-list></my-list>
+<my-list [parentdata]="[uname.value,email.value,pnumber.value]"></my-list>
 <!--<my-list [addcomp]="uname.value"></my-list>-->
 
 
 
 
   <table>
-    <tr *ngFor="let ad of add">
-      <td>{{ad.username}}</td>
+    <tr *ngFor="let ads of add">
+      <td>{{ads|json}}</td>
       <td><i class="fa fa-window-close" aria-hidden="true" (click)="remove(this)"></i></td>
     </tr>
   </table>

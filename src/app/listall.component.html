@@ -11,10 +11,13 @@
     <td>Test1<td>
     <td>test1@gmail.com</td>
     <td>0231456</td>
-    <td><i class="fa fa-window-close" aria-hidden="true"></i></td>
+    <td><i class="fa fa-edit" aria-hidden="true" (click)="edit()"></i></td>
+    <td><i class="fa fa-window-close" aria-hidden="true" (click)="remove()"></i></td>
+    
   </tr>
   <tr>  
-    <td>{{parentdata}}</td>
+    <td>{{parentdata |json}}</td>
+    <td><i class="fa fa-window-close" aria-hidden="true"></i></td>
   </tr>
  <!-- <tr *ngFor="let x as parentdata">  
     <td>{{x.id}}</td>

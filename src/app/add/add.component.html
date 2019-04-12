@@ -1,4 +1,6 @@
 
+<h5>Template Driven Forms</h5>
+<h6>Signup</h6>
 <form #addgroup="ngForm" (submit)="additems(uname.value,email.value,pnumber.value)" >
 
   <div class="form-group"> 
@@ -21,7 +23,8 @@
   <button class="btn btn-primary" type="reset">Reset</button>
   </div>
 </form>
-
+<br/>
+<my-list></my-list>
 <!--<my-list [addcomp]="uname.value"></my-list>-->
 
 
@@ -30,5 +33,6 @@
   <table>
     <tr *ngFor="let ad of add">
       <td>{{ad.username}}</td>
+      <td><button class="btn btn-default" (click)="remove(this)">Delete</button></td>
     </tr>
   </table>

@@ -21,6 +21,9 @@ export class AddComponent  {
     this.add.push();
     //console.log( Array <add> );
   }
+  remove(uname){
+    this.add.splice(uname);
+  }
 }
 export class addcontact{
   username:string;

@@ -14,11 +14,14 @@ export class AddComponent  {
               {id:'02',username:'def',email:'def@gmail.com',phonenumber:'246639'},
     ];
   } 
+   additemss(){
+    console.log();
+  }
   additems(uname,email,pnumber){
     //let a:any = this.add.push();
     //console.log(Array:add);
-    this.add.push();
-    //console.log( Array <add> );
+    //this.add.push();
+    console.log( addcontact);
   }
   remove(uname){
     this.add.pop();

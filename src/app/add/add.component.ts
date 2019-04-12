@@ -22,7 +22,7 @@ export class AddComponent  {
     //console.log( Array <add> );
   }
   remove(uname){
-    this.add.splice(uname);
+    this.add.pop();
   }
 }
 export class addcontact{

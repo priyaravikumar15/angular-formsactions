@@ -12,4 +12,7 @@ export class ListallComponent  {
   @ Input() parentdata:string;
  // @ Output() childdata :number = new EventEmitter();
  // @Input() name: string;
+ edit(){
+   alert({uname:JSON});
+ }
 }

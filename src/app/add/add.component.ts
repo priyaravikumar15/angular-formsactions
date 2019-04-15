@@ -21,10 +21,11 @@ export class AddComponent  {
   additems(uname,email,pnumber){
     //let a:any = this.add.push();
     //console.log(Array:add);
-    //this.add.push();
+     this.add.push( uname,email,pnumber );
     console.log( addcontact);
   }
   remove(uname){
+    confirm("Are you sure you want to delete");
     this.add.pop();
   }
 }

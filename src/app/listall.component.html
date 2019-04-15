@@ -1,5 +1,5 @@
 <p>List of Students Entry</p>
-<table class="table table-responsive">
+<table class="table table-responsive"#tabledata>
   <tr>
     <th>Id</th>
     <th>Username</th>
@@ -8,21 +8,21 @@
     <th>Actions</th>
   </tr>
   <tr>
-    <td>001</td>
-    <td>Test1<td>
-    <td>test1@gmail.com</td>
-    <td>0231456</td>
+    <td name="id">001</td>
+    <td name="uname">Test1<td>
+    <td name="emailid">test1@gmail.com</td>
+    <td name="pnumber">0231456</td>
     <td><i class="fa fa-edit" aria-hidden="true" (click)="edit()"></i></td>
     <td><i class="fa fa-window-close" aria-hidden="true" (click)="remove()"></i></td>
     
   </tr>
-  <tr *ngFor="let p of parentdata">   
+ <!-- <tr *ngFor="let p of parentdata">   
     <td>{{p}}</td>
     <td>{{p.username}}</td>
     <td>{{p.username}}</td>
     <td>{{p.username}}</td>
     <td><i class="fa fa-window-close" aria-hidden="true"></i></td>
-  </tr>
+  </tr>-->
  <!-- <tr *ngFor="let x as parentdata">  
     <td>{{x.id}}</td>
     <td>{{x.uname}}<td>
@@ -31,3 +31,4 @@
     <td><i class="fa fa-window-close" aria-hidden="true"></i></td>
   </tr>-->
 </table>
+<!--<input type="text" name="testbox" [(ngModel)]="testboxs" (click)="edit(this.value)" /><button>Submit </button> -->

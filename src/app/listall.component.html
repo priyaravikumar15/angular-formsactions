@@ -7,7 +7,7 @@
     <th>Phonenumber</th>
     <th>Actions</th>
   </tr>
-  <tr #childdata onchange="childdata()">
+  <tr>
     <td>001</td>
     <td>Test1<td>
     <td>test1@gmail.com</td>
@@ -16,8 +16,11 @@
     <td><i class="fa fa-window-close" aria-hidden="true" (click)="remove()"></i></td>
     
   </tr>
-  <tr>  
-    <td>{{parentdata |json}}</td>
+  <tr *ngFor="let p of parentdata">   
+    <td>{{p}}</td>
+    <td>{{p.username}}</td>
+    <td>{{p.username}}</td>
+    <td>{{p.username}}</td>
     <td><i class="fa fa-window-close" aria-hidden="true"></i></td>
   </tr>
  <!-- <tr *ngFor="let x as parentdata">  

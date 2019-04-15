@@ -1,4 +1,4 @@
-import { Component,Input,Output } from '@angular/core';
+import { Component,Input,Output,EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'my-list',
@@ -10,9 +10,6 @@ export class ListallComponent  {
   name = 'Angular';
  // public parentdata:string; 
   @ Input() parentdata:string;
-  //@ Output() childdata:number;
+ // @ Output() childdata :number = new EventEmitter();
  // @Input() name: string;
- childdata(){
-   
- }
 }

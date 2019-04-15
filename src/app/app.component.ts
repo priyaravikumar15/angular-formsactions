@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent  {
   name = 'Angular';
+  funct(count:number){
+    var con = this.count + 1;
+  }
 }

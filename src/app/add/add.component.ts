@@ -9,6 +9,7 @@ export class AddComponent  {
 
   add:addcontact[];
   parentdata:string;
+  childdata:number;
   constructor(){
     this.add =[{id:'01',username:'abc',email:'abc@gmail.com',phonenumber:'451226'},
               {id:'02',username:'def',email:'def@gmail.com',phonenumber:'246639'},

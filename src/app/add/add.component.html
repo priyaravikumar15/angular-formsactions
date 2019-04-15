@@ -3,6 +3,9 @@
 <h6>Signup</h6>
 <form #addgroup="ngForm" (submit)="additemss()" >
 <div >
+  <div class="form-group">
+    <input class="form-control" type="text" readonly value="001" placheolder="Id"/>
+  </div>
   <div class="form-group"> 
   <input class="form-control" type="text" name ="uname" #uname="ngModel" [(ngModel)]="username" placeholder="Username" required />
 
@@ -26,7 +29,7 @@
    </div>
 </form>
 <br/>
-<my-list [parentdata]="[uname.value,email.value,pnumber.value]"></my-list>
+<my-list [childdata]="[id]" [parentdata]="[uname.value,email.value,pnumber.value]"></my-list>
 <!--<my-list [addcomp]="uname.value"></my-list>-->
 
 

@@ -11,7 +11,7 @@ export class ListallComponent  {
  // public parentdata:string; 
   @ Input() parentdata:string;
   @Input() ds:any;
-  //@ Output() childdata :string = new EventEmitter();
+  @ Output() childdata:EventEmitter<string> = new EventEmitter<string>();
  // @Input() name: string;
  edit(){
   

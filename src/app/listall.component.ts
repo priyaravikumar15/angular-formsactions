@@ -7,12 +7,13 @@ import { Component,Input,Output,EventEmitter } from '@angular/core';
 })
 
 export class ListallComponent  {
-  name = 'Angular';
+  childdata = 'Angular';
  // public parentdata:string; 
   @ Input() parentdata:string;
- // @ Output() childdata :number = new EventEmitter();
+  @Input() ds:any;
+  //@ Output() childdata :string = new EventEmitter();
  // @Input() name: string;
  edit(){
-   alert({uname:JSON});
+  
  }
 }

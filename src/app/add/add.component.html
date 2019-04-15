@@ -23,7 +23,7 @@
   </div>
   <div *ngIf="pnumber.invalid &&(pnumber.dirty||pnumber.touched)" class=" alert alert-danger">Phonenumber Required</div>
   <div>
-  <button class="btn btn-primary" type="submit" [disabled]="addgroup.invalid">add</button> &nbsp;
+  <button class="btn btn-primary" type="submit" [disabled]="addgroup.invalid" (click)="additems(uname.value,email.value,pnumber.value)">add</button> &nbsp;
   <button class="btn btn-primary" type="reset">Reset</button>
   </div>
    </div>
@@ -41,3 +41,4 @@
       <td><i class="fa fa-window-close" aria-hidden="true" (click)="remove(this)"></i></td>
     </tr>
   </table>
+  {{cc}}

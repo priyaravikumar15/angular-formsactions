@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MainService } from './main.service';
 
 @Component({
   selector: 'my-app',
@@ -6,8 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
+
+  constructor(public mainservice:MainService){
+    
+  }
   name = 'Angular';
   funct(count:number){
     var con = this.count + 1;
+  }
+  getservice(){
+      this.mainservice.getserv();
   }
 }

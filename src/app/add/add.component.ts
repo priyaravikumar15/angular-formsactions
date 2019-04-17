@@ -11,6 +11,7 @@ export class AddComponent  {
 
   add:addcontact[];
   ss=[];
+  edit = []
   parentdata:string;
   childdata:string;
   constructor(public mainservice:MainService){

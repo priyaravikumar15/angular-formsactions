@@ -17,7 +17,7 @@ export class AppComponent implements OnInit {
     var con = this.count + 1;
   }
   getservice(){
-     // this.mainservice.getserv();
-      this.s = this.mainservice.add();
+    this.s =  this.mainservice.getserv();
+      //this.s = this.mainservice.add();
   }
 }

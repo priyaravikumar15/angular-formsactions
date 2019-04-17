@@ -10,14 +10,18 @@ export class MainService {
   additem =[
     {'id':'001','username':'abc','email':'abc@gmail.com','phonenumber':'10236'}
   ]
-  /*getserv(){
-    console.log("service working");
-  }*/
+  getserv(v){
+    console.log("service working" + v);
+    return this.additem;
+  }
   add(uname,email,pnumber){
       console.log('add working');
       let d:any = this.additem.push( uname,email,pnumber);
       return d;
-  
+  }
+  getadditems(){
+    console.log("getadditem");
+    return this.additem;
   }
   /*additems(uname,email,pnumber){
     //let a:any = this.add.push();

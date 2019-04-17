@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import { MainService } from './main.service';
 
 @Component({
@@ -6,16 +6,18 @@ import { MainService } from './main.service';
   templateUrl: './app.component.html',
   styleUrls: [ './app.component.css' ]
 })
-export class AppComponent  {
-
+export class AppComponent implements OnInit {
+  s=[];
   constructor(public mainservice:MainService){
     
   }
+   
   name = 'Angular';
   funct(count:number){
     var con = this.count + 1;
   }
   getservice(){
-      this.mainservice.getserv();
+     // this.mainservice.getserv();
+      this.s = this.mainservice.add();
   }
 }

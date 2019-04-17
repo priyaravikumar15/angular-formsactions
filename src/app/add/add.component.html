@@ -29,12 +29,15 @@
    </div>
 </form>
 <br/>
+
 <my-list [parentdata]="[uname.value,email.value,pnumber.value]"></my-list>
 <!--<my-list [addcomp]="uname.value"></my-list>-->
 
 
 
-
+<div *ngFor="let am of ss">
+  {{am|json}}
+</div>
   <table>
     <tr *ngFor="let ads of add">
       <td>{{ads|json}}</td>

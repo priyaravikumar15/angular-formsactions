@@ -11,10 +11,13 @@ import { routing } from './app.routing';
 import { AddComponent } from './add/add.component';
 
 import {MainService} from './main.service';
+import {AlwaysAuthGuard} from './AlwaysAuthGuard';
+/*import  { OnlyLoggedInUsersGuard } from './OnlyLoggedInUsersGuard';
+import {UserService } from './userservice'; */
 
 @NgModule({
   imports:[ BrowserModule, FormsModule,ReactiveFormsModule,RouterModule,routing ],
-  providers:[MainService],
+  providers:[MainService,AlwaysAuthGuard ],
   declarations: [ AppComponent, HelloComponent,AddComponent,ListallComponent],
   bootstrap:    [ AppComponent ]
 })

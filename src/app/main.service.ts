@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 
+
 @Injectable({
   providedIn:'root',
 })
@@ -23,6 +24,7 @@ export class MainService {
     console.log("getadditem");
     return this.additem;
   }
+  
   /*additems(uname,email,pnumber){
     //let a:any = this.add.push();
     //console.log(Array:add);
